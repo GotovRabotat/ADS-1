@@ -21,13 +21,13 @@ int cbinsearch(int* arr, int size, int value)
 		}
 	}
 	int shift = 1;
-	while (arr[mid - shift] == value)
+	while ((mid-shift>=0)&&(arr[mid - shift] == value))
 	{
 		k++;
 		shift++;
 	}
 	shift = 1;
-	while (arr[mid + shift] == value)
+	while ((mid+shift<=size)&&(arr[mid + shift] == value))
 	{
 		k++;
 		shift++;
